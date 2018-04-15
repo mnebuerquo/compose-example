@@ -9,6 +9,7 @@ fine, but 1.20.1 gives an error.
 # What should happen:
 
 This is the file system tree for this repo:
+```
 .
 ├── 1.18.0.log
 ├── 1.20.1.log
@@ -23,6 +24,7 @@ This is the file system tree for this repo:
 ├── readme.md
 ├── runtest.sh
 └── tree.txt
+```
 
 3 directories, 10 files
 
