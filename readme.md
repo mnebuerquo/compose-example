@@ -29,10 +29,11 @@ This is the file system tree for this repo:
 3 directories, 10 files
 
 The `compose/run.sh` script exports environment variables to substitute the
-build context and Dockerfile path in the `docker-compose.yml`. the context
-and Dockerfile are in different places, so that they can be inserted into an
-existing project without cluttering its repo. Or they can be used to build a
-project while being separate from its repo.
+build context and Dockerfile path in the `docker-compose.yml`. 
+
+The context and Dockerfile are in different places, so that the docker build 
+files can be inserted into an existing project without cluttering its repo. 
+Or they can be used to build a project while being separate from its repo.
 
 # How to test:
 
