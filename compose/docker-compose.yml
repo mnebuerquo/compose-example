@@ -1,0 +1,6 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: "${PROJECT}"
+      dockerfile: "${DOCKERDEV}/dockerfile/Dockerfile"
