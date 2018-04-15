@@ -1,0 +1,13 @@
+Set PWD to the app directory, which will become the build context of the container.
+PWD is now /opt/compose-example/context
+Run the run script which sets up compose paths like in my devops script.
+PWD=/opt/compose-example/context
+PROJECT=/opt/compose-example/context
+DOCKERDEV=/opt/compose-example/compose
+docker_compose_yml=/opt/compose-example/compose/docker-compose.yml
+name=context
+Darwin Kernel Version 17.4.0: Sun Dec 17 09:19:54 PST 2017; root:xnu-4570.41.2~1/RELEASE_X86_64
+Docker version 18.03.0-ce, build 0520e24
+docker-compose version 1.20.1, build 5d8c71b
+Building dev
+Cannot locate specified Dockerfile: /opt/compose-example/compose/dockerfile/Dockerfile
