@@ -1,0 +1,52 @@
+Set PWD to the app directory, which will become the build context of the container.
+PWD is now /opt/compose-example/context
+Run the run script which sets up compose paths like in my devops script.
+PWD=/opt/compose-example/context
+PROJECT=/opt/compose-example/context
+DOCKERDEV=/opt/compose-example/compose
+docker_compose_yml=/opt/compose-example/compose/docker-compose.yml
+name=context
+Darwin Kernel Version 17.5.0: Mon Mar  5 22:24:32 PST 2018; root:xnu-4570.51.1~1/RELEASE_X86_64
+Docker version 17.12.0-ce, build c97c6d6
+docker-compose version 1.18.0, build 8dd22a9
+Building dev
+Step 1/6 : FROM python:3
+ ---> c1e459c00dc3
+Step 2/6 : RUN pip install --upgrade pip
+ ---> Using cache
+ ---> f85b807e5d20
+Step 3/6 : WORKDIR /usr/src/app
+Removing intermediate container 2f285357ca0b
+ ---> 7b1a2cf4f52a
+Step 4/6 : COPY ./requirements.txt ./requirements.txt
+ ---> c3219500c03f
+Step 5/6 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in 4bd1234ea012
+Collecting flask (from -r requirements.txt (line 1))
+  Downloading Flask-0.12.2-py2.py3-none-any.whl (83kB)
+Collecting itsdangerous>=0.21 (from flask->-r requirements.txt (line 1))
+  Downloading itsdangerous-0.24.tar.gz (46kB)
+Collecting click>=2.0 (from flask->-r requirements.txt (line 1))
+  Downloading click-6.7-py2.py3-none-any.whl (71kB)
+Collecting Werkzeug>=0.7 (from flask->-r requirements.txt (line 1))
+  Downloading Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
+Collecting Jinja2>=2.4 (from flask->-r requirements.txt (line 1))
+  Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.4->flask->-r requirements.txt (line 1))
+  Downloading MarkupSafe-1.0.tar.gz
+Installing collected packages: itsdangerous, click, Werkzeug, MarkupSafe, Jinja2, flask
+  Running setup.py install for itsdangerous: started
+    Running setup.py install for itsdangerous: finished with status 'done'
+  Running setup.py install for MarkupSafe: started
+    Running setup.py install for MarkupSafe: finished with status 'done'
+Successfully installed Jinja2-2.10 MarkupSafe-1.0 Werkzeug-0.14.1 click-6.7 flask-0.12.2 itsdangerous-0.24
+[91mYou are using pip version 9.0.3, however version 10.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[0mRemoving intermediate container 4bd1234ea012
+ ---> 974d6254c07d
+Step 6/6 : ENTRYPOINT [ "python" ]
+ ---> Running in c3447cf05295
+Removing intermediate container c3447cf05295
+ ---> 2b7870957f58
+Successfully built 2b7870957f58
+Successfully tagged context_dev:latest
